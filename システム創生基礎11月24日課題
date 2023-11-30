@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char a[100];
+    printf("Please Enter a Password:");
+	scanf("%99s",a);
+	 int B=0;
+	 int C=strlen(a);
+	 int D=0;
+	 int E=0;
+	 int F=0;
+	 for(int i=0; i<C ; i++){
+	     if(a[i]>="A" && a[i]<="Z" ){
+	         D++;
+	     }
+	 }
+	 for(int i=0; i<C ; i++){
+	     if(a[i]>="a" && a[i]<="z" ){
+	         E++;
+	     }
+	 }
+	 for(int i=0; i<C ; i++){
+	     if(!(a[i]<"a" && a[i]>"z") && !((a[i]<"A" && a[i]>"Z")){
+	         F++;
+	     }
+	 }
+	 if (8<=C && C<=16 && 1<=D && 1<=E && 1<=F){
+	    printf("OK");
+	} 
+	else
+    {
+        printf("NO");
+    } 
+}
